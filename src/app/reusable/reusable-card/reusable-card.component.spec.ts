@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReusableHeaderComponent } from './reusable-header.component';
+import { ReusableCardComponent } from './reusable-card.component';
 
-describe('ReusableHeaderComponent', () => {
-  let component: ReusableHeaderComponent;
-  let fixture: ComponentFixture<ReusableHeaderComponent>;
+describe('ReusableCardComponent', () => {
+  let component: ReusableCardComponent;
+  let fixture: ComponentFixture<ReusableCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReusableHeaderComponent ]
+      declarations: [ ReusableCardComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ReusableHeaderComponent);
+    fixture = TestBed.createComponent(ReusableCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
