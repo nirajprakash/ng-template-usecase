@@ -15,6 +15,11 @@ const routes: Routes = [
   {
     path:"dynamic",
     loadChildren:() => import("./dynamic/dynamic.module").then((m)=> m.DynamicModule)
+  },
+
+  {
+    path:"conditional",
+    loadChildren:() => import("./conditional/conditional.module").then((m)=> m.ConditionalModule)
   }
 
 ];
