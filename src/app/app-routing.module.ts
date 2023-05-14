@@ -10,6 +10,11 @@ const routes: Routes = [
   {
     path:"reusable",
     loadChildren:() => import("./reusable/reusable.module").then((m)=> m.ReusableModule)
+  },
+
+  {
+    path:"dynamic",
+    loadChildren:() => import("./dynamic/dynamic.module").then((m)=> m.DynamicModule)
   }
 
 ];

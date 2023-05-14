@@ -1,0 +1,16 @@
+import { Component, Input, TemplateRef } from '@angular/core';
+import { ModelDynamicItem } from '../types';
+
+@Component({
+  selector: 'app-dynamic-card',
+  templateUrl: './dynamic-card.component.html',
+  styleUrls: ['./dynamic-card.component.scss']
+})
+export class DynamicCardComponent {
+
+
+@Input() data?: ModelDynamicItem
+
+  @Input() template?: TemplateRef<HTMLElement>
+
+}
