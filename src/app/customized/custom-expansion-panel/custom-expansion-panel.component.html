@@ -1,0 +1,9 @@
+<div class="panel" [ngClass]="{'expanded': isExpanded}" (click)="togglePanel()">
+    <div class="panel-header">
+        <h2>{{ title }}</h2>
+        <span>{{ isExpanded ? 'Collapse' : 'Expand' }}</span>
+    </div>
+    <div class="panel-body" *ngIf="isExpanded">
+        <ng-content></ng-content>
+    </div>
+</div>

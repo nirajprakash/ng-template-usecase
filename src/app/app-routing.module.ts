@@ -20,6 +20,11 @@ const routes: Routes = [
   {
     path:"conditional",
     loadChildren:() => import("./conditional/conditional.module").then((m)=> m.ConditionalModule)
+  },
+
+  {
+    path:"customized",
+    loadChildren:() => import("./customized/customized.module").then((m)=> m.CustomizedModule)
   }
 
 ];
