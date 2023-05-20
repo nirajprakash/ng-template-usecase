@@ -5,10 +5,33 @@
         class="backdrop tw-flex tw-flex-row xs max-sm:tw-flex-col max-sm:tw-items-center tw-gap-8  tw-px-8 tw-py-8 tw-rounded-2xl ">
 
 
-        <app-custom-expansion-panel title="Panel Title">
+        <app-custom-expansion-panel >
             <p *body>dsd  Paneldsds Content</p>
-            <p>Paneldsds Content</p>
+            <p *header>Paneldsds Title</p>
+        </app-custom-expansion-panel>
+
+
+        <app-custom-expansion-panel >
+
+            <p *header>s Title</p>
+            
+            <p *body>dsd  ds Content</p>
+            <ng-container *headerTemplateDef="let headerContent">
+                <div>
+                    <ng-container *ngTemplateOutlet="headerContent"></ng-container>
+
+                </div>
+            </ng-container>
         </app-custom-expansion-panel>
 
     </div>
 </div>
+
+<!-- <ng-template #customHeaderTemplate let-isExpanded="isExpanded" let-headerConent>
+    <ng-container *ngTemplateOutlet="headerConent"></ng-container>
+   <span>{{ isExpanded ? 'Collapse' : 'Expand' }}</span>
+</ng-template> -->
+
+<!-- <ng-template bodyTemplateDef #defaultPanelTemplate let-bodyConent>
+   <ng-container *ngTemplateOutlet="bodyConent"></ng-container>
+</ng-template> -->

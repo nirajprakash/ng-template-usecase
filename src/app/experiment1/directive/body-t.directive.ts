@@ -1,9 +1,9 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[header]'
+  selector: '[bodyTDef]'
 })
-export class ExpansionPanelHeaderDirective {
+export class BodyTDirective {
 
   constructor() { }
 

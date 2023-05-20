@@ -3,6 +3,7 @@ import { ExpansionPanelBodyDirective } from '../directive/expansion-panel-body.d
 import { ExpansionPanelHeaderDirective } from '../directive/expansion-panel-header.directive';
 import { ExpansionPanelBodyTemplateDirective } from '../directive/expansion-panel-body-template.directive';
 import { NgTemplateOutlet } from '@angular/common';
+import { ExpansionPanelHeaderTemplateDirective } from '../directive/expansion-panel-header-template.directive';
 // import { ExpansionPanelBodyDirective } from '../expansion-panel-body.directive';
 // import { ExpansionPanelHeaderDirective } from '../expansion-panel-header.directive';
 
@@ -14,16 +15,17 @@ import { NgTemplateOutlet } from '@angular/common';
 export class CustomExpansionPanelComponent implements AfterViewInit, AfterContentInit {
   
 
-  @Input() title?: string;
+  // @Input() title?: string;
   isExpanded = false;
 
 
   
 
-  @ViewChild("defaultPanelTemplate",  {read: TemplateRef}) defaultBodyTemplate?: any;
+  // @ViewChild("defaultPanelTemplate",  {read: TemplateRef}) defaultBodyTemplate?: any;
   
-  // @ContentChild(ExpansionPanelHeaderDirective, {read: TemplateRef}) headerTemplate?: any;
-  @ContentChild(ExpansionPanelBodyDirective, {read: TemplateRef}) bodyView?:any;//ExpansionPanelBodyDirective;
+  @ContentChild(ExpansionPanelHeaderDirective, {read: TemplateRef}) headerContent?: any;
+  @ContentChild(ExpansionPanelHeaderTemplateDirective, {read: TemplateRef}) headerTemplate?: any;
+  @ContentChild(ExpansionPanelBodyDirective, {read: TemplateRef}) bodyConent?:any;//ExpansionPanelBodyDirective;
   @ContentChild(ExpansionPanelBodyTemplateDirective, {read: TemplateRef}) bodyTemplate?: any;
 
   togglePanel() {
@@ -31,13 +33,13 @@ export class CustomExpansionPanelComponent implements AfterViewInit, AfterConten
   }
 
   ngAfterContentInit(): void {
-    console.log(this.bodyView);
+    console.log(this.bodyConent);
       
   }
 
   ngAfterViewInit(): void {
 
-    console.log(this.bodyView);
+    console.log(this.bodyConent);
 
     // var bodyTemplate = this.bodyTemplate??this.defaultBodyTemplate;
     // console.log(bodyTemplate);

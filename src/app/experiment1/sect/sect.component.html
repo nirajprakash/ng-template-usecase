@@ -1,0 +1,26 @@
+<div class="panel" [ngClass]="{'expanded': isExpanded}" (click)="togglePanel()">
+    <div class="panel-header">
+        <h2>{{ title }}</h2>
+        <span>{{ isExpanded ? 'Collapse' : 'Expand' }}</span>
+    </div>
+    <ng-container class="panel-body" *ngIf="isExpanded">
+        <!-- <ng-container bodyOutlet></ng-container> -->
+
+        <ng-container *ngTemplateOutlet="bodyTemplate || defaultPanelTemplate; context:{$implicit: bodyView}" ></ng-container>
+    </ng-container>
+</div>
+
+
+<ng-template bodyTDef #defaultPanelTemplate let-bodyView>
+<!-- <ng-content [select]="body"></ng-content> -->
+
+<ng-container *ngTemplateOutlet="bodyView"></ng-container>
+
+<!-- <ng-container >{{bodyView}}</ng-container> -->
+
+    <!-- <ng-content select="[body]"></ng-content> -->
+</ng-template>
+
+<!-- <ng-template #defaultHeaderTemplate>
+    <ng-content select="[header]"></ng-content>
+</ng-template> -->

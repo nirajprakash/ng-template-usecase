@@ -7,6 +7,7 @@ import { CustomExpansionPanelComponent } from './custom-expansion-panel/custom-e
 import { ExpansionPanelBodyDirective } from './directive/expansion-panel-body.directive';
 import { ExpansionPanelHeaderDirective } from './directive/expansion-panel-header.directive';
 import { ExpansionPanelBodyTemplateDirective } from './directive/expansion-panel-body-template.directive';
+import { ExpansionPanelHeaderTemplateDirective } from './directive/expansion-panel-header-template.directive';
 // import { ExpansionPanelHeaderDirective } from './expansion-panel-header.directive';
 // import { ExpansionPanelBodyDirective } from './expansion-panel-body.directive';
 
@@ -17,7 +18,8 @@ import { ExpansionPanelBodyTemplateDirective } from './directive/expansion-panel
     CustomExpansionPanelComponent,
     ExpansionPanelHeaderDirective,
     ExpansionPanelBodyDirective,
-    ExpansionPanelBodyTemplateDirective
+    ExpansionPanelBodyTemplateDirective,
+    ExpansionPanelHeaderTemplateDirective
   ],
   imports: [
     CommonModule,
