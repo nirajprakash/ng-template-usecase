@@ -38,13 +38,13 @@
 
                     </div> -->
 
-                    <div class=" tw-flex tw-flex-row tw-bg-slate-50 tw-rounded-md tw-p-4">
+                    <div class="tw-transition tw-flex tw-flex-row tw-bg-slate-50 tw-rounded-md tw-p-4" [ngClass]="{'tw-bg-blue-600 tw-text-white tw-shadow-xl':expanded }">
                         <div class="tw-flex tw-flex-auto">
                             <ng-container *ngTemplateOutlet="headerContent"></ng-container>
                 
                         </div>
                         <!-- <ng-content select="[header]"></ng-content> -->
-                        <span class="material-icons">{{ expanded ? 'expand_less' : 'expand_more' }}</span>
+                        <span class="tw-transition material-icons tw-rotate-0 " [ngClass]="{'tw-rotate-180':expanded }">expand_more</span>
                 
                         <!-- <span>{{ isExpanded ? 'Collapse' : 'Expand' }}</span> -->
                     </div>
