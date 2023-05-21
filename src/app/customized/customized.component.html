@@ -13,7 +13,8 @@
                     <img class="tw-object-cover tw-aspect-square tw-h-12 tw-rounded-md"
                         src="https://picsum.photos/500" />
 
-                    <p class="tw-text-sm tw-text-stone-700">Occaecat aute, but quam, for doloremque, and sequi minim. Nequeporro lorem doloremque officia.
+                    <p class="tw-text-sm tw-text-stone-700">Occaecat aute, but quam, for doloremque, and sequi minim.
+                        Nequeporro lorem doloremque officia.
                         Occaecat. </p>
                 </div>
             </app-custom-expansion-panel>
@@ -26,40 +27,33 @@
                     <img class="tw-object-cover tw-aspect-square tw-h-12 tw-rounded-md"
                         src="https://picsum.photos/500" />
 
-                    <p class="tw-text-sm tw-text-stone-700">Occaecat aute, but quam, for doloremque, and sequi minim. Nequeporro lorem doloremque officia.
+                    <p class="tw-text-sm tw-text-stone-700">Occaecat aute, but quam, for doloremque, and sequi minim.
+                        Nequeporro lorem doloremque officia.
                         Occaecat. </p>
                 </div>
 
 
                 <!-- custom -->
                 <ng-container *headerTemplateDef="let headerContent; let expanded=isExpanded">
-                    <!-- <div>
-                        <ng-container *ngTemplateOutlet="headerContent"></ng-container>
 
-                    </div> -->
 
-                    <div class="tw-transition tw-flex tw-flex-row tw-bg-slate-50 tw-rounded-md tw-p-4" [ngClass]="{'tw-bg-blue-600 tw-text-white tw-shadow-xl':expanded }">
+                    <div class="tw-transition tw-flex tw-flex-row tw-bg-slate-50 tw-rounded-md tw-p-4"
+                        [ngClass]="{'tw-bg-blue-600 tw-text-white tw-shadow-xl':expanded }">
                         <div class="tw-flex tw-flex-auto">
                             <ng-container *ngTemplateOutlet="headerContent"></ng-container>
-                
+
                         </div>
-                        <!-- <ng-content select="[header]"></ng-content> -->
-                        <span class="tw-transition material-icons tw-rotate-0 " [ngClass]="{'tw-rotate-180':expanded }">expand_more</span>
-                
-                        <!-- <span>{{ isExpanded ? 'Collapse' : 'Expand' }}</span> -->
+                        <span class="tw-transition material-icons tw-rotate-0 "
+                            [ngClass]="{'tw-rotate-180':expanded }">expand_more</span>
+
                     </div>
                 </ng-container>
 
                 <ng-container *bodyTemplateDef="let bodyConent">
-                    <!-- <ng-content [select]="body"></ng-content> -->
                     <div class="tw-bg-white tw-border-blue-600 tw-border-2 tw-rounded-md tw-p-4 tw-shadow-xl">
-                
+
                         <ng-container *ngTemplateOutlet="bodyConent"></ng-container>
                     </div>
-                
-                    <!-- <ng-container >{{bodyView}}</ng-container> -->
-                
-                    <!-- <ng-content select="[body]"></ng-content> -->
                 </ng-container>
             </app-custom-expansion-panel>
 
@@ -68,12 +62,3 @@
 
     </div>
 </div>
-
-<!-- <ng-template #customHeaderTemplate let-isExpanded="isExpanded" let-headerConent>
-    <ng-container *ngTemplateOutlet="headerConent"></ng-container>
-   <span>{{ isExpanded ? 'Collapse' : 'Expand' }}</span>
-</ng-template> -->
-
-<!-- <ng-template bodyTemplateDef #defaultPanelTemplate let-bodyConent>
-   <ng-container *ngTemplateOutlet="bodyConent"></ng-container>
-</ng-template> -->

@@ -13,7 +13,6 @@ export class TemplateInputComponent {
 
   @Input() value: any
   @Output() valueChange: EventEmitter<any> = new EventEmitter<any>();
-  // @Output() er: EventEmitter<any> = new EventEmitter<any>();
 
   onChange($event: any) {
 
