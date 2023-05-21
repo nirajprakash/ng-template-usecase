@@ -37,8 +37,9 @@
                 <ng-container *headerTemplateDef="let headerContent; let expanded=isExpanded">
 
 
-                    <div class="tw-transition tw-flex tw-flex-row tw-bg-slate-50 tw-rounded-md tw-p-4"
-                        [ngClass]="{'tw-bg-blue-600 tw-text-white tw-shadow-xl':expanded }">
+                    <div class="tw-transition tw-cursor-pointer tw-flex tw-flex-row  tw-rounded-md tw-p-4"
+                        [ngClass]="{'tw-bg-blue-600 tw-text-white tw-shadow-xl':expanded,
+                    'tw-bg-slate-50 tw-text-stone-900':!expanded }">
                         <div class="tw-flex tw-flex-auto">
                             <ng-container *ngTemplateOutlet="headerContent"></ng-container>
 
