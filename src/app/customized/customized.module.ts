@@ -11,7 +11,6 @@ import { ExpansionPanelHeaderTemplateDirective } from './directive/expansion-pan
 // import { ExpansionPanelHeaderDirective } from './expansion-panel-header.directive';
 // import { ExpansionPanelBodyDirective } from './expansion-panel-body.directive';
 
-
 @NgModule({
   declarations: [
     CustomizedComponent,
