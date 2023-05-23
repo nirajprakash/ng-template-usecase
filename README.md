@@ -7,7 +7,7 @@
 
 This repository contains examples of different use cases for ng-template in Angular. ng-template is a powerful feature in Angular that allows for creating dynamic, reusable, and customizable components.
 <br>
-### 📖 [**Read the blog**](http://localhost:4200)
+### 📖 [**Read the blog**](https://medium.com/@nirajprakash13/templating-in-angular-ng-template-use-cases-d9ea1acf3fd1)
 
 <br>
 
